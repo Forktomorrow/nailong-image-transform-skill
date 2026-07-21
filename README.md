@@ -19,6 +19,7 @@ skills/transform-images-with-nailong/
 ├── references/
 │   ├── character-spec.md
 │   ├── examples.md
+│   ├── transformation-patterns.md
 │   └── universal-prompt.md
 └── assets/examples/
     └── starry-night-nailong-example.jpg
@@ -34,7 +35,7 @@ skills/transform-images-with-nailong/
 
 ## 视觉测试
 
-展示页包含星空与旋转楼梯的原图滑动对比，以及《蒙娜丽莎》《创造亚当》《呐喊》等典型构图测试。页面源码位于 `docs/`，由 GitHub Pages 发布。
+展示页包含星空原图滑动对比，《蒙娜丽莎》《创造亚当》《呐喊》等西方构图测试，以及富春山居、千里江山、水墨奔马和敦煌飞天等东方绘画实验。页面源码位于 `docs/`，由 GitHub Pages 发布。
 
 ## 安装
 
