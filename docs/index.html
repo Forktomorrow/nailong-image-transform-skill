@@ -29,6 +29,7 @@
       <a href="#compare">对比</a>
       <a href="#gallery">画廊</a>
       <a href="#east-gallery">东方</a>
+      <a href="#filter-lab">过滤器</a>
       <a href="#skill">Skill</a>
       <a class="nav-github" href="https://github.com/Forktomorrow/nailong-image-transform-skill">GitHub</a>
     </nav>
@@ -140,9 +141,70 @@
       </div>
     </section>
 
+    <section class="section filter-lab-section" id="filter-lab">
+      <div class="filter-heading">
+        <p class="section-index">04 / GLOBAL FILTER</p>
+        <h2>它不是主题包，<br>而是最后一遍设计编译。</h2>
+        <p>基础设计先解决功能与信息，奶龙过滤器再从 Token、结构、组件、图片和动效逐层改写。调节覆盖强度与递归层级，观察同一个界面如何变化。</p>
+      </div>
+
+      <div class="filter-controls" aria-label="奶龙化过滤器参数">
+        <label>
+          <span><b>C</b> 覆盖强度 <output id="coverageOutput">2</output></span>
+          <input id="coverageRange" type="range" min="0" max="4" value="2">
+          <small>0 原始 · 1 签名 · 2 主题 · 3 系统 · 4 世界</small>
+        </label>
+        <label>
+          <span><b>R</b> 分形递归 <output id="recursionOutput">1</output></span>
+          <input id="recursionRange" type="range" min="0" max="3" value="1">
+          <small>0 单尺度 · 1 大接中 · 2 大中小 · 3 微纹理</small>
+        </label>
+        <div class="filter-code"><code id="filterCode">C2-S2-R1-P5-M1</code><span>功能与无障碍始终锁定</span></div>
+      </div>
+
+      <div class="filter-demo" id="filterDemo" data-intensity="2" data-recursion="1">
+        <div class="demo-browser-bar"><i></i><i></i><i></i><span>ordinary-product.local / transformed</span></div>
+        <div class="demo-app">
+          <aside class="demo-sidebar">
+            <div class="demo-brand"><span>奶</span><b>工作台</b></div>
+            <nav class="demo-nav-list" aria-label="演示导航">
+              <a class="active" href="javascript:void(0)">概览</a>
+              <a href="javascript:void(0)">项目</a>
+              <a href="javascript:void(0)">素材</a>
+            </nav>
+            <div class="demo-peek"><img src="assets/mona-lisa-nailong.png" alt="窥视的奶龙"></div>
+          </aside>
+          <div class="demo-main">
+            <header class="demo-topbar"><span>今日工作</span><button type="button">新建任务</button></header>
+            <section class="demo-hero-card">
+              <div>
+                <p>FINAL DESIGN PASS</p>
+                <h3>先保持好用，<br>再让世界变成奶龙。</h3>
+                <button type="button">运行过滤器</button>
+              </div>
+              <div class="demo-visual">
+                <img class="demo-main-mascot" src="assets/galloping-nailong.png" alt="奔跑奶龙主视觉">
+                <div class="fractal-node node-a depth-1"><img src="assets/mona-lisa-nailong.png" alt=""></div>
+                <div class="fractal-node node-b depth-1"><img src="assets/scream-nailong.png" alt=""></div>
+                <div class="fractal-node node-c depth-2"><img src="assets/mona-lisa-nailong.png" alt=""></div>
+                <div class="fractal-node node-d depth-2"><img src="assets/scream-nailong.png" alt=""></div>
+                <div class="fractal-node node-e depth-3">••</div>
+                <div class="fractal-node node-f depth-3">◡</div>
+              </div>
+            </section>
+            <section class="demo-cards">
+              <article><span>01</span><h4>结构</h4><p>导航和卡片开始继承梨形重心。</p><i></i></article>
+              <article><span>02</span><h4>图像</h4><p>重要视觉对象使用图片 Skill 重绘。</p><i></i></article>
+              <article><span>03</span><h4>动效</h4><p>低频呼吸、摇尾和蹒跚弹性。</p><i></i></article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section method-section" id="skill">
       <div class="method-title">
-        <p class="section-index">04 / THE SKILL</p>
+        <p class="section-index">05 / THE SKILL</p>
         <h2>奶龙化，不等于<br>把所有东西都变黄。</h2>
         <figure class="nailong-cameo">
           <img src="assets/galloping-nailong.png" alt="奔跑中的水墨奶龙">

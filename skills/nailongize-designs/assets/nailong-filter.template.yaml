@@ -1,0 +1,21 @@
+nailong_filter:
+  coverage: 2
+  structure: 2
+  recursion: 1
+  preservation: 5
+  motion: 1
+  include:
+    - visual_tokens
+    - layout_rhythm
+    - components
+    - imagery
+    - motion
+  exclude:
+    - legal_copy
+    - brand_logos
+    - raw_data
+  protected:
+    - information_architecture
+    - accessibility
+    - responsive_behavior
+    - component_api

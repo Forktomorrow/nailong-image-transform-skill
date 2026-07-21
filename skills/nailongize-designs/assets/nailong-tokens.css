@@ -1,0 +1,40 @@
+:root {
+  --nl-yellow: oklch(0.83 0.16 87);
+  --nl-yellow-deep: oklch(0.68 0.15 76);
+  --nl-belly: oklch(0.94 0.04 88);
+  --nl-ink: oklch(0.19 0.02 75);
+  --nl-muted: oklch(0.52 0.025 78);
+  --nl-success: oklch(0.66 0.14 145);
+  --nl-warning: oklch(0.76 0.15 75);
+  --nl-danger: oklch(0.6 0.2 28);
+  --nl-radius-belly: 999px;
+  --nl-radius-body: 42% 58% 48% 52% / 38% 44% 56% 62%;
+  --nl-radius-soft: 24px;
+  --nl-focus: 0 0 0 3px color-mix(in oklch, var(--nl-yellow) 62%, white);
+  --nl-ease-waddle: cubic-bezier(.2, .85, .3, 1.18);
+  --nl-duration-fast: 160ms;
+  --nl-duration-slow: 620ms;
+}
+
+.nl-belly-surface {
+  color: var(--nl-ink);
+  background: var(--nl-belly);
+  border-radius: var(--nl-radius-soft);
+}
+
+.nl-primary-action {
+  min-height: 44px;
+  color: var(--nl-ink);
+  background: var(--nl-yellow);
+  border: 1px solid var(--nl-ink);
+  border-radius: var(--nl-radius-belly);
+  transition: transform var(--nl-duration-fast) var(--nl-ease-waddle);
+}
+
+.nl-primary-action:hover { transform: translateY(-2px) scale(1.015); }
+.nl-primary-action:active { transform: translateY(1px) scale(.98); }
+.nl-primary-action:focus-visible { outline: none; box-shadow: var(--nl-focus); }
+
+@media (prefers-reduced-motion: reduce) {
+  .nl-primary-action { transition: none; }
+}

@@ -32,3 +32,26 @@ copyButton.addEventListener('click', async () => {
   }
   window.setTimeout(() => { copyButton.textContent = '复制通用提示词'; }, 1800);
 });
+
+const filterDemo = document.querySelector('#filterDemo');
+const coverageRange = document.querySelector('#coverageRange');
+const recursionRange = document.querySelector('#recursionRange');
+const coverageOutput = document.querySelector('#coverageOutput');
+const recursionOutput = document.querySelector('#recursionOutput');
+const filterCode = document.querySelector('#filterCode');
+
+function updateFilterDemo() {
+  const coverage = coverageRange.value;
+  const recursion = recursionRange.value;
+  filterDemo.dataset.intensity = coverage;
+  filterDemo.dataset.recursion = recursion;
+  coverageOutput.value = coverage;
+  recursionOutput.value = recursion;
+  const structure = Math.min(4, Number(coverage));
+  const motion = Number(coverage) >= 3 ? 2 : Number(coverage) >= 1 ? 1 : 0;
+  filterCode.textContent = `C${coverage}-S${structure}-R${recursion}-P5-M${motion}`;
+}
+
+coverageRange.addEventListener('input', updateFilterDemo);
+recursionRange.addEventListener('input', updateFilterDemo);
+updateFilterDemo();

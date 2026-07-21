@@ -77,5 +77,6 @@ description: Transform an uploaded meme, artwork, photo, poster, screenshot, or 
 ## 边界
 
 - 不声称不同平台会自动读取 Codex Skill。平台不支持 Skill 时，使用 `references/universal-prompt.md` 中的通用块。
+- 当前任务是网页、UI、幻灯片或完整设计系统时，先使用 `$nailongize-designs` 建立跨层过滤计划；本 Skill 只负责其中需要重绘的位图资产。
 - 不把示例图当作唯一造型模板；它用于说明替换逻辑和画风继承。
 - 不移除原作者签名或来源标记。遇到水印时保留，除非用户拥有图像并明确要求合法清理。

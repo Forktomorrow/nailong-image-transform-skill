@@ -1,12 +1,15 @@
-# 奶龙元素替换 Skill
+# 奶龙化设计系统
 
-把表情包、名画、照片或插画中的关键视觉元素替换成奶龙，同时尽量保留原构图、文字、光影和画风。
+把表情包、名画、照片或插画中的关键视觉元素替换成奶龙，也可以作为其他设计 Skill 的最终过滤器，把完整前端的结构、组件、图像、纹理和动效系统性奶龙化。
 
-在线展示：[奶龙化元素实验室](https://forktomorrow.github.io/nailong-image-transform-skill/)
+[![奶龙化元素实验室前端展示](docs/assets/readme-hero.png)](https://forktomorrow.github.io/nailong-image-transform-skill/)
 
-仓库包含两种用法：
+[在线体验](https://forktomorrow.github.io/nailong-image-transform-skill/) · [下载最新版 `.skill`](https://github.com/Forktomorrow/nailong-image-transform-skill/releases/latest/download/nailong-transform.skill) · [查看图片 Skill](skills/transform-images-with-nailong/SKILL.md) · [查看全局设计过滤器](skills/nailongize-designs/SKILL.md)
 
-- Codex：安装插件后调用 `$transform-images-with-nailong`，上传图片并说明要奶龙化。
+仓库包含三种用法：
+
+- 图片：调用 `$transform-images-with-nailong`，上传图片并说明要替换的视觉锚点。
+- 前端与完整设计：先使用任意基础设计 Skill，再调用 `$nailongize-designs` 作为最终过滤器。
 - 其他生图模型：上传图片，复制 `skills/transform-images-with-nailong/references/universal-prompt.md` 中的通用编辑块。
 
 ## 目录
@@ -23,6 +26,17 @@ skills/transform-images-with-nailong/
 │   └── universal-prompt.md
 └── assets/examples/
     └── starry-night-nailong-example.jpg
+skills/nailongize-designs/
+├── SKILL.md
+├── agents/openai.yaml
+├── references/
+│   ├── filter-contract.md
+│   ├── fractal-composition.md
+│   ├── frontend-layer-matrix.md
+│   └── validation.md
+└── assets/
+    ├── nailong-filter.template.yaml
+    └── nailong-tokens.css
 ```
 
 ## 使用示例
@@ -32,6 +46,18 @@ skills/transform-images-with-nailong/
 ```
 
 模型如果不认识“奶龙”，请同时附上示例图，并保留 Skill 中的完整外观描述。
+
+前端组合示例：
+
+```text
+先完成这个产品的基础前端设计，冻结功能、内容、无障碍和响应式行为。
+然后使用 $nailongize-designs，以 C4-S4-R2-P5-M2 作为最终过滤器。
+需要重绘页面图片时调用 $transform-images-with-nailong。
+```
+
+高强度过滤器使用 `C4-S4-R2-P5-M2`：覆盖与结构深入到完整设计系统，使用大、中、小三尺度递归，同时把功能、内容、无障碍和响应式行为锁定在最高保护级别。
+
+[![全局奶龙化过滤器交互演示](docs/assets/readme-filter.png)](https://forktomorrow.github.io/nailong-image-transform-skill/#filter-lab)
 
 ## 视觉测试
 

@@ -1,7 +1,7 @@
 {
   "name": "nailong-image-transform-skill",
-  "version": "0.2.0",
-  "description": "Replace important elements in images with Nailong while preserving composition, text, and style.",
+  "version": "0.3.0",
+  "description": "Transform images and complete design systems into coherent Nailong worlds while preserving meaning and usability.",
   "author": {
     "name": "Forktomorrow",
     "url": "https://github.com/Forktomorrow"
@@ -9,18 +9,19 @@
   "homepage": "https://github.com/Forktomorrow/nailong-image-transform-skill",
   "repository": "https://github.com/Forktomorrow/nailong-image-transform-skill",
   "license": "MIT",
-  "keywords": ["nailong", "image-editing", "meme", "prompt-engineering", "codex-skill"],
+  "keywords": ["nailong", "image-editing", "frontend-design", "design-system", "prompt-engineering", "codex-skill"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "奶龙元素替换",
-    "shortDescription": "把图片关键元素替换成奶龙，并保留构图、文字与原画风。",
-    "longDescription": "分析输入图像的主角和视觉锚点，将选定元素逐一替换成奶龙，同时锁定原始构图、透视、遮挡、文字、光影和媒介风格。附带可复制到其他生图模型的通用提示词。",
+    "displayName": "奶龙化设计系统",
+    "shortDescription": "图片替换与全局设计过滤器，把完整作品系统性奶龙化。",
+    "longDescription": "包含位图元素替换引擎和最终设计过滤器：可在保留内容、功能、无障碍与响应式行为的前提下，改写前端结构、组件、图像、纹理、分形层级和动效。",
     "developerName": "Forktomorrow",
     "category": "Creative",
-    "capabilities": ["Image editing", "Prompt engineering"],
+    "capabilities": ["Image editing", "Frontend design", "Design systems", "Prompt engineering"],
     "defaultPrompt": [
       "把这张图的重要元素替换成奶龙，保留构图、文字和画风。",
-      "分析这张表情包，只把笑点核心对象改成奶龙。"
+      "把这个前端作为基线，用 C4-S4-R2-P5-M2 做最终奶龙化过滤。",
+      "用大奶龙接小奶龙的多尺度分形方式填充这个不规则主视觉。"
     ]
   }
 }
