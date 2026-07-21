@@ -1,0 +1,26 @@
+{
+  "name": "nailong-image-transform-skill",
+  "version": "0.1.0",
+  "description": "Replace important elements in images with Nailong while preserving composition, text, and style.",
+  "author": {
+    "name": "Forktomorrow",
+    "url": "https://github.com/Forktomorrow"
+  },
+  "homepage": "https://github.com/Forktomorrow/nailong-image-transform-skill",
+  "repository": "https://github.com/Forktomorrow/nailong-image-transform-skill",
+  "license": "MIT",
+  "keywords": ["nailong", "image-editing", "meme", "prompt-engineering", "codex-skill"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "奶龙元素替换",
+    "shortDescription": "把图片关键元素替换成奶龙，并保留构图、文字与原画风。",
+    "longDescription": "分析输入图像的主角和视觉锚点，将选定元素逐一替换成奶龙，同时锁定原始构图、透视、遮挡、文字、光影和媒介风格。附带可复制到其他生图模型的通用提示词。",
+    "developerName": "Forktomorrow",
+    "category": "Creative",
+    "capabilities": ["Image editing", "Prompt engineering"],
+    "defaultPrompt": [
+      "把这张图的重要元素替换成奶龙，保留构图、文字和画风。",
+      "分析这张表情包，只把笑点核心对象改成奶龙。"
+    ]
+  }
+}

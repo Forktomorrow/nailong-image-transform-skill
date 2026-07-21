@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="奶龙元素替换 Skill：把图片中的关键视觉元素替换成奶龙，同时保留原构图、文字与画风。">
+  <meta property="og:title" content="奶龙化元素实验室">
+  <meta property="og:description" content="上传图片，识别关键元素，用奶龙重构它。">
+  <meta property="og:image" content="assets/starry-user-reference.jpg">
+  <title>奶龙化元素实验室</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!--
+    Assumptions:
+    1. 这是 Skill 的公开作品展示页，不伪装成奶龙官方站点。
+    2. 真实生成图是页面主角，界面只负责建立观看节奏。
+    3. 奶油黄是唯一 UI 强调色；蓝色、橙色等来自作品本身。
+  -->
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="返回顶部">
+      <span class="wordmark-mark">奶</span>
+      <span>奶龙化元素实验室</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="#compare">对比</a>
+      <a href="#gallery">画廊</a>
+      <a href="#skill">Skill</a>
+      <a class="nav-github" href="https://github.com/Forktomorrow/nailong-image-transform-skill">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">NON-OFFICIAL · IMAGE TRANSFORMATION SKILL</p>
+        <h1>把重要元素，<br><em>换成奶龙。</em></h1>
+        <p class="hero-intro">不是给图片刷一层黄色，也不是随手塞满角色。先找到画面的主角、视觉锚点和笑点，再让奶龙继承它们的位置、姿态与画风。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#compare">看原图对比</a>
+          <a class="button button-quiet" href="https://github.com/Forktomorrow/nailong-image-transform-skill/releases/latest/download/nailong-transform.skill">下载 .skill</a>
+        </div>
+      </div>
+      <figure class="hero-art">
+        <img src="assets/starry-user-reference.jpg" alt="星空中的天体被替换成多只奶龙">
+        <figcaption>
+          <span>REFERENCE 01</span>
+          <strong>当天体变成奶龙，旋涡与夜色仍然成立。</strong>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="manifesto" aria-label="设计原则">
+      <p>识别语义</p><i></i><p>建立映射</p><i></i><p>锁定构图</p><i></i><p>继承画风</p>
+    </section>
+
+    <section class="section compare-section" id="compare">
+      <div class="section-heading">
+        <p class="section-index">01 / BEFORE &amp; AFTER</p>
+        <h2>同一张图，<br>只替换它的视觉锚点。</h2>
+        <p>拖动分界线查看变化。背景、镜头和空间关系应当继续工作；真正改变的是原来承担视觉焦点的对象。</p>
+      </div>
+
+      <article class="comparison-story">
+        <div class="compare" style="--position: 52%" data-compare>
+          <img class="compare-base" src="assets/starry-original.png" alt="未奶龙化的旋涡星空村庄">
+          <div class="compare-after">
+            <img src="assets/starry-nailong.png" alt="月亮与星星替换成奶龙后的旋涡星空村庄">
+          </div>
+          <div class="compare-line" aria-hidden="true"><span></span></div>
+          <input type="range" min="0" max="100" value="52" aria-label="拖动比较星空原图和奶龙版">
+          <span class="compare-label compare-label-before">奶龙版</span>
+          <span class="compare-label compare-label-after">原图</span>
+        </div>
+        <div class="story-note">
+          <span class="story-number">A</span>
+          <div>
+            <h3>星空：天体替换</h3>
+            <p>月亮与主要星体变成不同姿态的奶龙。柏树、村庄、山丘和天空旋涡继续承担原构图。</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="comparison-story staircase-story">
+        <div class="compare compare-square" style="--position: 50%" data-compare>
+          <img class="compare-base" src="assets/staircase-original.jpg" alt="俯视旋转楼梯原图">
+          <div class="compare-after">
+            <img src="assets/staircase-nailong.png" alt="旋转楼梯替换成蜷缩奶龙">
+          </div>
+          <div class="compare-line" aria-hidden="true"><span></span></div>
+          <input type="range" min="0" max="100" value="50" aria-label="拖动比较旋转楼梯原图和奶龙版">
+          <span class="compare-label compare-label-before">奶龙版</span>
+          <span class="compare-label compare-label-after">原图</span>
+        </div>
+        <div class="story-note">
+          <span class="story-number">B</span>
+          <div>
+            <h3>楼梯：旋涡意象替换</h3>
+            <p>整圈踏步被解释成一只俯视蜷缩的大奶龙。它保留楼梯的圆形动势、中心洞口与白色栏杆，而不是变成一条普通黄色通道。</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="section-heading gallery-heading">
+        <p class="section-index">02 / CLASSIC WORKS</p>
+        <h2>名画没有消失，<br>只是主角换了。</h2>
+      </div>
+      <div class="gallery-grid">
+        <button class="art-card art-card-tall" data-lightbox="assets/mona-lisa-nailong.png" aria-label="查看奶龙版蒙娜丽莎大图">
+          <img src="assets/mona-lisa-nailong.png" alt="奶龙版蒙娜丽莎">
+          <span><b>01</b><strong>《蒙娜丽莎》</strong><small>姿态、手势与晕涂法</small></span>
+        </button>
+        <button class="art-card art-card-wide" data-lightbox="assets/creation-nailong.png" aria-label="查看奶龙版创造亚当大图">
+          <img src="assets/creation-nailong.png" alt="奶龙版创造亚当">
+          <span><b>02</b><strong>《创造亚当》</strong><small>两指将触的叙事中心</small></span>
+        </button>
+        <button class="art-card art-card-tall art-card-scream" data-lightbox="assets/scream-nailong.png" aria-label="查看奶龙版呐喊大图">
+          <img src="assets/scream-nailong.png" alt="奶龙版呐喊">
+          <span><b>03</b><strong>《呐喊》</strong><small>表情与波动线条</small></span>
+        </button>
+        <button class="art-card art-card-wide" data-lightbox="assets/starry-comparison.png" aria-label="查看星空左右对照大图">
+          <img src="assets/starry-comparison.png" alt="星空与奶龙星空左右对照">
+          <span><b>04</b><strong>星空对照实验</strong><small>多元素映射压力测试</small></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section method-section" id="skill">
+      <div class="method-title">
+        <p class="section-index">03 / THE SKILL</p>
+        <h2>奶龙化，不等于<br>把所有东西都变黄。</h2>
+      </div>
+      <ol class="method-list">
+        <li>
+          <span>01</span>
+          <div><h3>找出重要元素</h3><p>优先识别主角、最大物体、核心道具、月亮、太阳和重复视觉符号。</p></div>
+        </li>
+        <li>
+          <span>02</span>
+          <div><h3>建立替换映射</h3><p>让奶龙继承原元素的位置、尺度、朝向、动作、遮挡与画面功能。</p></div>
+        </li>
+        <li>
+          <span>03</span>
+          <div><h3>锁定其余内容</h3><p>文字、背景、构图、透视和未指定元素默认保持，减少模型整图重画。</p></div>
+        </li>
+        <li>
+          <span>04</span>
+          <div><h3>继承原图媒介</h3><p>油画保留笔触，照片匹配光影，像素图保持网格，漫画延续线条与网点。</p></div>
+        </li>
+      </ol>
+      <aside class="prompt-box">
+        <p>QUICK PROMPT</p>
+        <blockquote id="promptText">把这张图中决定主题和笑点的重要元素逐一替换成奶龙。每只奶龙继承原元素的位置、大小、姿态、透视和画面功能；严格保留原构图、背景、文字和画风。不要把整张图染黄，不要随机增加角色。</blockquote>
+        <button id="copyPrompt" type="button">复制通用提示词</button>
+      </aside>
+    </section>
+
+    <section class="download-section">
+      <div>
+        <p class="eyebrow">OPEN SOURCE · CODEX SKILL + UNIVERSAL PROMPT</p>
+        <h2>拿一张图，<br>开始奶龙化。</h2>
+      </div>
+      <div class="download-actions">
+        <a class="button button-primary" href="https://github.com/Forktomorrow/nailong-image-transform-skill">查看 GitHub 仓库</a>
+        <a class="text-link" href="https://github.com/Forktomorrow/nailong-image-transform-skill/releases/latest/download/nailong-transform.skill">下载 nailong-transform.skill</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>非官方创作工具，与奶龙角色权利方无隶属或授权关系。</p>
+    <p>Skill text &amp; site © 2026 Forktomorrow · MIT</p>
+  </footer>
+
+  <dialog id="lightbox">
+    <button class="lightbox-close" aria-label="关闭大图">关闭</button>
+    <img src="" alt="画廊大图">
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>

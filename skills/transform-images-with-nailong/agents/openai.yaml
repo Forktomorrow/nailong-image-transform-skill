@@ -1,0 +1,4 @@
+interface:
+  display_name: "奶龙元素替换"
+  short_description: "识别关键视觉元素并替换为奶龙，保留原构图、文字与画风"
+  default_prompt: "Use $transform-images-with-nailong to turn the important elements in this image into 奶龙 while preserving the original composition and style."
