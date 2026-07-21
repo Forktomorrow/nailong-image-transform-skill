@@ -2,6 +2,8 @@ nailong_filter:
   coverage: 2
   structure: 2
   recursion: 1
+  fitting_mode: multiscale_instances
+  coherent_asset_set: true
   preservation: 5
   motion: 1
   include:

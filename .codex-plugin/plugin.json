@@ -1,6 +1,6 @@
 {
   "name": "nailong-image-transform-skill",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Transform images and complete design systems into coherent Nailong worlds while preserving meaning and usability.",
   "author": {
     "name": "Forktomorrow",
@@ -21,7 +21,7 @@
     "defaultPrompt": [
       "把这张图的重要元素替换成奶龙，保留构图、文字和画风。",
       "把这个前端作为基线，用 C4-S4-R2-P5-M2 做最终奶龙化过滤。",
-      "用大奶龙接小奶龙的多尺度分形方式填充这个不规则主视觉。"
+      "用同画风的大、中、小奶龙共同拟合这个不规则主视觉的轮廓、凹角与窄缝。"
     ]
   }
 }

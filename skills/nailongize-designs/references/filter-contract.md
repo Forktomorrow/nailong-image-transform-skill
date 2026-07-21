@@ -7,6 +7,8 @@ nailong_filter:
   coverage: 2       # C 0-4
   structure: 2      # S 0-4
   recursion: 1      # R 0-3
+  fitting_mode: multiscale_instances
+  coherent_asset_set: true
   preservation: 5   # P 1-5；前端不得低于 4
   motion: 1         # M 0-3
   include:
@@ -44,12 +46,14 @@ nailong_filter:
 - `S3`：布局流线、导航节奏、容器关系。
 - `S4`：页面骨架和空间叙事都使用奶龙语法。
 
-### Recursion
+### Resolution / multiscale fitting
 
-- `R0`：无递归，一个区域只出现一个尺度。
-- `R1`：大轮廓内含中型角色或符号。
-- `R2`：大 → 中 → 小三尺度，适合高强度前端和海报。
-- `R3`：再增加微纹理层，只用于静态画面或大尺寸背景。
+- `R0`：单尺度，一个区域只使用一种尺寸。
+- `R1`：大 + 中两级独立角色共同拟合。
+- `R2`：大 + 中 + 小三级独立角色共同拟合，适合高强度前端和海报。
+- `R3`：在三级角色外增加抽象微纹理，只用于静态画面或大尺寸背景。
+
+`R` 不表示图片套图片。每个角色实例必须是同画风、独立姿态，并参与轮廓、凹角或窄缝的几何拟合。
 
 ### Preservation
 

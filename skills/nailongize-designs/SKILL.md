@@ -1,6 +1,6 @@
 ---
 name: nailongize-designs
-description: Apply a systematic 奶龙 (Nailong) transformation as the final design pass over an existing or newly generated frontend, website, UI prototype, dashboard, slide deck, infographic, visual system, or coded interface. Use when the user asks to 奶龙化网页/前端/UI/所有元素/整体结构, add Nailong as a global design filter, compose this with another design skill, increase or tune 奶龙化强度, recursively fill irregular shapes with large and small Nailong motifs, or turn an otherwise complete design into a coherent Nailong world while preserving content, usability, accessibility, responsive behavior, and data accuracy.
+description: Apply a systematic 奶龙 (Nailong) transformation as the final design pass over an existing or newly generated frontend, website, UI prototype, dashboard, slide deck, infographic, visual system, or coded interface. Use when the user asks to 奶龙化网页/前端/UI/所有元素/整体结构, add Nailong as a global design filter, compose this with another design skill, increase or tune 奶龙化强度, make buttons/cards/navigation visibly adopt Nailong poses, fit irregular shapes with coherent large-medium-small Nailong instances, or turn an otherwise complete design into a coherent Nailong world while preserving content, usability, accessibility, responsive behavior, and data accuracy.
 ---
 
 # 奶龙化设计过滤器
@@ -24,7 +24,7 @@ description: Apply a systematic 奶龙 (Nailong) transformation as the final des
 
 - `C Coverage 0–4`：奶龙化覆盖多少元素。
 - `S Structure 0–4`：从表面配色深入到组件和布局骨架的程度。
-- `R Recursion 0–3`：大奶龙由小奶龙或抽象奶龙纹样递归填充的层数。
+- `R Resolution 0–3`：使用几级尺寸的奶龙共同拟合目标区域。它表示大、中、小实例的尺度层级，不表示把一张奶龙图片嵌进另一张图片。
 - `P Preservation 1–5`：对功能、内容和品牌基线的保护强度；前端默认 5，不得低于 4。
 - `M Motion 0–3`：眨眼、呼吸、摇尾、蹒跚弹性等动效强度。
 
@@ -39,14 +39,15 @@ description: Apply a systematic 奶龙 (Nailong) transformation as the final des
 
 结构深度、前端元素映射和禁止事项读取 [frontend-layer-matrix.md](references/frontend-layer-matrix.md)。
 
-## 分形奶龙化
+## 分型拟合与多尺度奶龙化
 
-对不规则区域、长路径、纹理场和大面积背景使用尺度递归，而不是均匀复制角色：
+对不规则区域、长路径、组件群和大面积背景使用多实例尺度拟合，而不是均匀复制角色或嵌套其他素材：
 
-1. 宏观层先确定一个大奶龙轮廓、运动流线或角色群落。
-2. 中观层沿轮廓骨架、转折和视觉重心放置中型奶龙或肚皮、尾巴、眼睛等结构。
-3. 微观层只在剩余空隙使用小奶龙或抽象符号，不强行画完整五官和四肢。
-4. 前端默认 `R≤2`，静态画面可用 `R=3`。可读文字、表单、数据和导航区域禁用递归填充。
+1. 先把目标区域视为遮罩，提取外轮廓、中心骨架、凹角、窄端和视觉重心。
+2. 用 1–3 个大奶龙承担主轮廓和语义，不强求一只角色覆盖全部边角。
+3. 用中型奶龙沿凹角、转折和边界补形；用小奶龙补剩余窄缝，并让朝向、视线和动作形成群体关系。
+4. 同一组角色必须共享画风、光线和材质。禁止把蒙娜丽莎、呐喊、水墨等异质奶龙素材缩小后塞进界面充当递归。
+5. 前端默认 `R≤2`，静态画面可用 `R=3`。文字、表单和数据区保留负空间，但控件外形可以直接变成躺卧、蜷缩、探头或伸展的奶龙。
 
 完整的遮罩、骨架、尺度衰减和密度规则读取 [fractal-composition.md](references/fractal-composition.md)。
 
@@ -65,11 +66,12 @@ description: Apply a systematic 奶龙 (Nailong) transformation as the final des
 ## 实现顺序
 
 1. 应用 `assets/nailong-tokens.css` 或把其中 Token 映射到现有设计系统。
-2. 写一份差异计划：保留项、替换项、递归区域、图像任务、动效任务。
+2. 写一份差异计划：保留项、形态替换项、拟合遮罩、多尺度角色组、图像任务、动效任务。
 3. 先改全局 Token 和布局节奏，再改单个组件。
-4. 对 hero、插画、背景和复杂形状使用真实图像资产；需要重绘时调用图片 Skill。
-5. 最后添加低频动效，优先 `transform` 和 `opacity`，并支持 `prefers-reduced-motion`。
-6. 在桌面、手机、键盘导航和减少动效模式下验证。
+4. 先让组件本身获得奶龙形态：按钮可成为横卧奶龙，侧栏可成为蜷曲奶龙，标签可成为探头小奶龙；不要只换成黄黑色块。
+5. 对 hero、插画、背景和复杂角色群使用同画风图像资产；需要重绘时调用图片 Skill。
+6. 最后添加低频动效，优先呼吸、眨眼、摇尾和按压回弹，并支持 `prefers-reduced-motion`。
+7. 在桌面、手机、键盘导航和减少动效模式下验证。
 
 ## 输出要求
 

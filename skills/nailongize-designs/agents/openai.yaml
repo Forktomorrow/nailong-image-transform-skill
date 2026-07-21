@@ -1,4 +1,4 @@
 interface:
   display_name: "奶龙化设计过滤器"
   short_description: "最终设计过滤器：系统改写前端结构、组件、图像、纹理与动效"
-  default_prompt: "Use $nailongize-designs as the final pass at C4-S4-R2-P5-M2, preserving all functionality, accessibility, content, and responsive behavior."
+  default_prompt: "Use $nailongize-designs as the final pass at C4-S4-R2-P5-M2. Make components visibly adopt Nailong poses and use coherent large, medium, and small Nailong instances to fit irregular regions while preserving functionality, accessibility, content, and responsive behavior."

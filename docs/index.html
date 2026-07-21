@@ -144,8 +144,8 @@
     <section class="section filter-lab-section" id="filter-lab">
       <div class="filter-heading">
         <p class="section-index">04 / GLOBAL FILTER</p>
-        <h2>它不是主题包，<br>而是最后一遍设计编译。</h2>
-        <p>基础设计先解决功能与信息，奶龙过滤器再从 Token、结构、组件、图片和动效逐层改写。调节覆盖强度与递归层级，观察同一个界面如何变化。</p>
+        <h2>组件要长成奶龙，<br>不是只染成黄色。</h2>
+        <p>高强度过滤会让按钮躺下、侧栏蜷曲、卡片探头；分型拟合则用同画风的大、中、小奶龙共同补齐不规则轮廓，而不是把其他作品的缩略图塞进来。</p>
       </div>
 
       <div class="filter-controls" aria-label="奶龙化过滤器参数">
@@ -155,50 +155,74 @@
           <small>0 原始 · 1 签名 · 2 主题 · 3 系统 · 4 世界</small>
         </label>
         <label>
-          <span><b>R</b> 分形递归 <output id="recursionOutput">1</output></span>
+          <span><b>R</b> 分型层级 <output id="recursionOutput">1</output></span>
           <input id="recursionRange" type="range" min="0" max="3" value="1">
-          <small>0 单尺度 · 1 大接中 · 2 大中小 · 3 微纹理</small>
+          <small>0 单尺度 · 1 大＋中 · 2 大＋中＋小 · 3 增加抽象微纹理</small>
         </label>
         <div class="filter-code"><code id="filterCode">C2-S2-R1-P5-M1</code><span>功能与无障碍始终锁定</span></div>
       </div>
 
       <div class="filter-demo" id="filterDemo" data-intensity="2" data-recursion="1">
-        <div class="demo-browser-bar"><i></i><i></i><i></i><span>ordinary-product.local / transformed</span></div>
+        <div class="demo-browser-bar"><i></i><i></i><i></i><span>baseline.product / morphological-pass</span></div>
         <div class="demo-app">
           <aside class="demo-sidebar">
+            <div class="sidebar-dragon" aria-hidden="true"><i class="sd-head"><b></b><b></b></i><i class="sd-belly"></i><i class="sd-tail"></i><i class="sd-foot"></i></div>
             <div class="demo-brand"><span>奶</span><b>工作台</b></div>
             <nav class="demo-nav-list" aria-label="演示导航">
               <a class="active" href="javascript:void(0)">概览</a>
               <a href="javascript:void(0)">项目</a>
               <a href="javascript:void(0)">素材</a>
             </nav>
-            <div class="demo-peek"><img src="assets/mona-lisa-nailong.png" alt="窥视的奶龙"></div>
           </aside>
           <div class="demo-main">
-            <header class="demo-topbar"><span>今日工作</span><button type="button">新建任务</button></header>
+            <header class="demo-topbar"><span>今日工作</span><button class="dragon-button dragon-button-small" type="button"><span class="db-head"><i></i><i></i></span><span class="db-belly">新建任务</span><span class="db-tail"></span><span class="db-feet"></span></button></header>
             <section class="demo-hero-card">
               <div>
-                <p>FINAL DESIGN PASS</p>
-                <h3>先保持好用，<br>再让世界变成奶龙。</h3>
-                <button type="button">运行过滤器</button>
+                <p>MULTISCALE SHAPE FITTING</p>
+                <h3>大奶龙定构图，<br>中小奶龙补边角。</h3>
+                <button class="dragon-button" type="button"><span class="db-head"><i></i><i></i></span><span class="db-belly">运行过滤器</span><span class="db-tail"></span><span class="db-feet"></span></button>
               </div>
-              <div class="demo-visual">
-                <img class="demo-main-mascot" src="assets/galloping-nailong.png" alt="奔跑奶龙主视觉">
-                <div class="fractal-node node-a depth-1"><img src="assets/mona-lisa-nailong.png" alt=""></div>
-                <div class="fractal-node node-b depth-1"><img src="assets/scream-nailong.png" alt=""></div>
-                <div class="fractal-node node-c depth-2"><img src="assets/mona-lisa-nailong.png" alt=""></div>
-                <div class="fractal-node node-d depth-2"><img src="assets/scream-nailong.png" alt=""></div>
-                <div class="fractal-node node-e depth-3">••</div>
-                <div class="fractal-node node-f depth-3">◡</div>
+              <div class="demo-visual" aria-label="大中小奶龙共同拟合不规则区域">
+                <div class="fit-mask" aria-hidden="true"></div>
+                <div class="fit-dragon fit-large"><i class="fd-head"><b></b><b></b></i><i class="fd-belly"></i><i class="fd-tail"></i><i class="fd-arm"></i><i class="fd-foot"></i></div>
+                <div class="fit-dragon fit-medium fit-medium-a depth-1"><i class="fd-head"><b></b><b></b></i><i class="fd-belly"></i><i class="fd-tail"></i><i class="fd-foot"></i></div>
+                <div class="fit-dragon fit-medium fit-medium-b depth-1"><i class="fd-head"><b></b><b></b></i><i class="fd-belly"></i><i class="fd-tail"></i><i class="fd-foot"></i></div>
+                <div class="fit-dragon fit-small fit-small-a depth-2"><i class="fd-head"><b></b><b></b></i><i class="fd-belly"></i><i class="fd-tail"></i></div>
+                <div class="fit-dragon fit-small fit-small-b depth-2"><i class="fd-head"><b></b><b></b></i><i class="fd-belly"></i><i class="fd-tail"></i></div>
+                <div class="fit-dragon fit-small fit-small-c depth-2"><i class="fd-head"><b></b><b></b></i><i class="fd-belly"></i><i class="fd-tail"></i></div>
+                <div class="fit-grain depth-3 grain-a">••</div><div class="fit-grain depth-3 grain-b">◡</div><div class="fit-grain depth-3 grain-c">∿</div>
               </div>
             </section>
             <section class="demo-cards">
-              <article><span>01</span><h4>结构</h4><p>导航和卡片开始继承梨形重心。</p><i></i></article>
-              <article><span>02</span><h4>图像</h4><p>重要视觉对象使用图片 Skill 重绘。</p><i></i></article>
-              <article><span>03</span><h4>动效</h4><p>低频呼吸、摇尾和蹒跚弹性。</p><i></i></article>
+              <article><span>01</span><h4>形态</h4><p>组件出现头、肚皮、尾巴和姿态，不止是换色。</p><i></i></article>
+              <article><span>02</span><h4>拟合</h4><p>多只同画风奶龙共同补轮廓、凹角和窄缝。</p><i></i></article>
+              <article><span>03</span><h4>关系</h4><p>视线、朝向与动作形成跟随、环抱或排队。</p><i></i></article>
             </section>
           </div>
         </div>
+      </div>
+
+      <div class="site-collision-heading">
+        <p class="section-index">STRUCTURE STUDIES · NON-OFFICIAL</p>
+        <h3>三个国内知名网页，<br>三种不同的奶龙化方法。</h3>
+        <p>下面只研究公开页面的结构特征，不复制品牌视觉：小红书的瀑布流适合多尺度群落，B站的视频网格适合横卧播放器，淘宝的搜索与类目适合长条和蜷曲形态。</p>
+      </div>
+      <div class="site-collision-grid">
+        <article class="site-study study-xhs">
+          <header><b>小红书式</b><span>瀑布流 · 多尺度填隙</span></header>
+          <div class="masonry-dragons" aria-hidden="true"><i class="tile t1"></i><i class="tile t2"></i><i class="tile t3"></i><i class="tile t4"></i><i class="tile t5"></i><i class="tile t6"></i></div>
+          <p>卡片不再是统一矩形：大奶龙承担主笔记，中奶龙补列间落差，小奶龙填边角，仍保留瀑布流的扫描节奏。</p>
+        </article>
+        <article class="site-study study-bili">
+          <header><b>B站式</b><span>视频网格 · 横卧播放器</span></header>
+          <div class="video-dragons" aria-hidden="true"><i><b></b><span></span></i><i><b></b><span></span></i><i><b></b><span></span></i><i><b></b><span></span></i></div>
+          <p>每张视频卡成为横卧奶龙：肚皮承载画面，头部标记作者，尾巴延伸播放进度；网格和标题仍然清晰。</p>
+        </article>
+        <article class="site-study study-taobao">
+          <header><b>淘宝式</b><span>搜索与类目 · 长路径对象</span></header>
+          <div class="commerce-dragons" aria-hidden="true"><i class="search-dragon"><b></b><span></span></i><div><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <p>搜索框由一只伸展奶龙构成，分类入口由小奶龙沿侧边排队；高密度信息继续规整，角色只接管外壳与路径。</p>
+        </article>
       </div>
     </section>
 
