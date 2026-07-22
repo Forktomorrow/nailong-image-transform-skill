@@ -21,11 +21,15 @@ skills/transform-images-with-nailong/
 ├── agents/openai.yaml
 ├── references/
 │   ├── character-spec.md
+│   ├── character-topology-contract.md
 │   ├── examples.md
 │   ├── transformation-patterns.md
 │   └── universal-prompt.md
-└── assets/examples/
-    └── starry-night-nailong-example.jpg
+└── assets/
+    ├── examples/starry-night-nailong-example.jpg
+    └── reference/
+        ├── nailong-reference-board.webp
+        └── pose-*.webp
 skills/nailongize-designs/
 ├── SKILL.md
 ├── agents/openai.yaml
@@ -55,7 +59,7 @@ skills/nailongize-designs/
 需要重绘页面图片时调用 $transform-images-with-nailong。
 ```
 
-高强度过滤器使用 `C4-S4-R2-P5-M2`：覆盖与结构深入到完整设计系统，使用同画风的大、中、小奶龙共同拟合轮廓、凹角与窄缝，同时把功能、内容、无障碍和响应式行为锁定在最高保护级别。这里的 `R2` 是多实例尺度层级，不是图片套图片。
+高强度过滤器使用 `C4-S4-R2-P5-M2`：覆盖与结构深入到完整设计系统，使用同画风的大、中、小奶龙共同拟合轮廓、凹角与窄缝，同时把功能、内容、无障碍和响应式行为锁定在最高保护级别。这里的 `R2` 是一次独立的多尺度构图求解，不是图片套图片，也不是在 R1 上继续追加小角色。角色参考板与拓扑合同会锁定头身连续、浅色大肚皮、短粗四肢、粗短尾和面部锚点，避免退化成黄色椭圆吉祥物。
 
 [![全局奶龙化过滤器交互演示](docs/assets/readme-filter.png)](https://forktomorrow.github.io/nailong-image-transform-skill/#filter-lab)
 
@@ -70,3 +74,5 @@ skills/nailongize-designs/
 ## 说明
 
 本项目是非官方的提示词与工作流工具，与奶龙角色权利方无隶属或授权关系。MIT 许可仅覆盖本仓库原创的文字、配置和代码，不覆盖奶龙角色形象、示例底图或其他第三方素材。使用生成结果时请遵守所用平台规则及当地版权、商标和肖像权要求。
+
+`assets/reference/` 中的图片仅用于角色识别、拓扑校验与非官方研究展示，不代表官方授权；角色形象及参考素材权利归相应权利方。公开使用或再分发前请自行确认授权范围。

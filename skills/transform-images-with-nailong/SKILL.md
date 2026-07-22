@@ -22,7 +22,7 @@ description: Transform an uploaded meme, artwork, photo, poster, screenshot, or 
 6. 使用可编辑输入图像的生图工具执行。若当前环境没有图像编辑工具，输出可直接复制的完整提示词。
 7. 检查结果；一次只修一个问题，并重复所有不变量。
 
-需要准确描述奶龙外观时，读取 [character-spec.md](references/character-spec.md)。需要选择对象变形方式或诊断失败结果时，读取 [transformation-patterns.md](references/transformation-patterns.md)。需要跨模型复制提示词时，读取 [universal-prompt.md](references/universal-prompt.md)。需要参考完整案例时，读取 [examples.md](references/examples.md)。
+需要准确描述奶龙外观时，必须同时读取 [character-spec.md](references/character-spec.md) 与 [character-topology-contract.md](references/character-topology-contract.md)，并查看 `assets/reference/nailong-reference-board.webp`。角色参考与拓扑合同优先于临时提示词；只做黄色椭圆或通用小龙判定为失败。需要选择对象变形方式或诊断失败结果时，读取 [transformation-patterns.md](references/transformation-patterns.md)。需要跨模型复制提示词时，读取 [universal-prompt.md](references/universal-prompt.md)。需要参考完整案例时，读取 [examples.md](references/examples.md)。
 
 ## 替换规则
 
@@ -35,7 +35,7 @@ description: Transform an uploaded meme, artwork, photo, poster, screenshot, or 
 - 动态主体优先继承速度、重心、动作方向和受力关系，不要机械复制原物种的外轮廓。
 - 飘带、烟雾、笔触等附属轨迹用于延续动作，不要把它们误当成可随意删除的装饰。
 - 重复元素分别生成姿态或表情略有差别的奶龙，但保持节奏和数量关系。
-- 奶龙必须仍然可辨认：黄色圆润身体、浅色肚皮、短肢、小尾巴、极简黑色五官和憨萌神态。
+- 奶龙必须仍然可辨认：头身连续的黄色胖圆体块、大而连续的浅色肚皮、短粗四肢、根部厚的粗短尾、大而高位的高光眼，以及低位小鼻孔和小嘴。
 - 让奶龙继承原图媒介。油画保留笔触，像素图保留像素网格，黑白漫画保留网点与线条，照片匹配光照和景深。
 - 表情包默认保留所有文字、字号、位置、排版和拼写。只有用户明确要求时才改字。
 - 不添加输入图中不存在的新道具、文字、水印、边框或额外角色。

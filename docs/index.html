@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=0.3.2">
 </head>
 <body>
   <!--
@@ -145,7 +145,7 @@
       <div class="filter-heading">
         <p class="section-index">04 / GLOBAL FILTER</p>
         <h2>组件要长成奶龙，<br>不是只染成黄色。</h2>
-        <p>高强度过滤会让按钮躺下、侧栏蜷曲、卡片探头；分型拟合则用同画风的大、中、小奶龙共同补齐不规则轮廓，而不是把其他作品的缩略图塞进来。</p>
+        <p>高强度过滤会让按钮躺下、侧栏蜷曲、卡片探头；角色可以拉伸，但头身连续、浅色大肚皮、短粗四肢、粗短尾巴和憨萌面部锚点不能丢。每提高一级分型，都重新求解整组构图。</p>
       </div>
 
       <div class="filter-controls" aria-label="奶龙化过滤器参数">
@@ -155,9 +155,9 @@
           <small>0 原始 · 1 签名 · 2 主题 · 3 系统 · 4 世界</small>
         </label>
         <label>
-          <span><b>R</b> 分型层级 <output id="recursionOutput">1</output></span>
+          <span><b>R</b> 重构层级 <output id="recursionOutput">1</output></span>
           <input id="recursionRange" type="range" min="0" max="3" value="1">
-          <small>0 单尺度 · 1 大＋中 · 2 大＋中＋小 · 3 增加抽象微纹理</small>
+          <small>0–3 每一级都是独立构图，不是向上一层追加小副本</small>
         </label>
         <div class="filter-code"><code id="filterCode">C2-S2-R1-P5-M1</code><span>功能与无障碍始终锁定</span></div>
       </div>
@@ -166,7 +166,7 @@
         <div class="demo-browser-bar"><i></i><i></i><i></i><span>baseline.product / morphological-pass</span></div>
         <div class="demo-app">
           <aside class="demo-sidebar">
-            <div class="sidebar-dragon" aria-hidden="true"><i class="sd-head"><b></b><b></b></i><i class="sd-belly"></i><i class="sd-tail"></i><i class="sd-foot"></i></div>
+            <img class="sidebar-dragon" src="assets/nailong-ui/stand.png" alt="" aria-hidden="true">
             <div class="demo-brand"><span>奶</span><b>工作台</b></div>
             <nav class="demo-nav-list" aria-label="演示导航">
               <a class="active" href="javascript:void(0)">概览</a>
@@ -175,31 +175,41 @@
             </nav>
           </aside>
           <div class="demo-main">
-            <header class="demo-topbar"><span>今日工作</span><button class="dragon-button dragon-button-small" type="button"><span class="db-head"><i></i><i></i></span><span class="db-belly">新建任务</span><span class="db-tail"></span><span class="db-feet"></span></button></header>
+            <header class="demo-topbar"><span>今日工作</span><button class="dragon-button dragon-button-small" type="button"><img src="assets/nailong-ui/leap.png" alt=""><span>新建任务</span></button></header>
             <section class="demo-hero-card">
               <div>
-                <p>MULTISCALE SHAPE FITTING</p>
-                <h3>大奶龙定构图，<br>中小奶龙补边角。</h3>
-                <button class="dragon-button" type="button"><span class="db-head"><i></i><i></i></span><span class="db-belly">运行过滤器</span><span class="db-tail"></span><span class="db-feet"></span></button>
+                <p>IDENTITY-LOCKED RECOMPOSITION</p>
+                <h3>每调一级，<br>整组奶龙重新构图。</h3>
+                <button class="dragon-button" type="button"><img src="assets/nailong-ui/leap.png" alt=""><span>运行过滤器</span></button>
               </div>
               <div class="demo-visual" aria-label="大中小奶龙共同拟合不规则区域">
                 <div class="fit-mask" aria-hidden="true"></div>
-                <div class="fit-dragon fit-large"><i class="fd-head"><b></b><b></b></i><i class="fd-belly"></i><i class="fd-tail"></i><i class="fd-arm"></i><i class="fd-foot"></i></div>
-                <div class="fit-dragon fit-medium fit-medium-a depth-1"><i class="fd-head"><b></b><b></b></i><i class="fd-belly"></i><i class="fd-tail"></i><i class="fd-foot"></i></div>
-                <div class="fit-dragon fit-medium fit-medium-b depth-1"><i class="fd-head"><b></b><b></b></i><i class="fd-belly"></i><i class="fd-tail"></i><i class="fd-foot"></i></div>
-                <div class="fit-dragon fit-small fit-small-a depth-2"><i class="fd-head"><b></b><b></b></i><i class="fd-belly"></i><i class="fd-tail"></i></div>
-                <div class="fit-dragon fit-small fit-small-b depth-2"><i class="fd-head"><b></b><b></b></i><i class="fd-belly"></i><i class="fd-tail"></i></div>
-                <div class="fit-dragon fit-small fit-small-c depth-2"><i class="fd-head"><b></b><b></b></i><i class="fd-belly"></i><i class="fd-tail"></i></div>
-                <div class="fit-grain depth-3 grain-a">••</div><div class="fit-grain depth-3 grain-b">◡</div><div class="fit-grain depth-3 grain-c">∿</div>
+                <div class="fit-composition fit-r0" aria-hidden="true">
+                  <img class="r0-a" src="assets/nailong-ui/stand.png" alt="">
+                </div>
+                <div class="fit-composition fit-r1" aria-hidden="true">
+                  <img class="r1-a" src="assets/nailong-ui/stand.png" alt=""><img class="r1-b" src="assets/nailong-ui/shy.png" alt="">
+                </div>
+                <div class="fit-composition fit-r2" aria-hidden="true">
+                  <img class="r2-a" src="assets/nailong-ui/stand.png" alt=""><img class="r2-b" src="assets/nailong-ui/leap.png" alt=""><img class="r2-c" src="assets/nailong-ui/shy.png" alt=""><img class="r2-d" src="assets/nailong-ui/leap.png" alt=""><img class="r2-e" src="assets/nailong-ui/stand.png" alt="">
+                </div>
+                <div class="fit-composition fit-r3" aria-hidden="true">
+                  <img class="r3-a" src="assets/nailong-ui/leap.png" alt=""><img class="r3-b" src="assets/nailong-ui/stand.png" alt=""><img class="r3-c" src="assets/nailong-ui/shy.png" alt=""><img class="r3-d" src="assets/nailong-ui/stand.png" alt=""><img class="r3-e" src="assets/nailong-ui/leap.png" alt=""><img class="r3-f" src="assets/nailong-ui/shy.png" alt=""><img class="r3-g" src="assets/nailong-ui/shy.png" alt="">
+                </div>
               </div>
             </section>
             <section class="demo-cards">
-              <article><span>01</span><h4>形态</h4><p>组件出现头、肚皮、尾巴和姿态，不止是换色。</p><i></i></article>
-              <article><span>02</span><h4>拟合</h4><p>多只同画风奶龙共同补轮廓、凹角和窄缝。</p><i></i></article>
-              <article><span>03</span><h4>关系</h4><p>视线、朝向与动作形成跟随、环抱或排队。</p><i></i></article>
+              <article><span>01</span><h4>身份锁定</h4><p>比例可变，头身、肚皮、短肢、粗尾和面部关系不能丢。</p><i></i></article>
+              <article><span>02</span><h4>逐级重构</h4><p>R 改变时重新选择数量、姿态、位置、遮挡与负空间。</p><i></i></article>
+              <article><span>03</span><h4>群体构图</h4><p>大中小实例共同拟合，并形成跟随、环抱或对望关系。</p><i></i></article>
             </section>
           </div>
         </div>
+      </div>
+
+      <div class="identity-contract">
+        <img src="assets/nailong-ui/reference-board.webp" alt="六张奶龙角色外形参考图组成的参考板">
+        <div><p class="section-index">PERSISTENT CHARACTER CONTRACT</p><h3>先锁定这是奶龙，<br>再讨论怎么变形。</h3><p>参考板和角色拓扑合同已经持久化到 Skill。只剩黄色、椭圆和黑点眼睛的结果会直接判定失败；按钮、侧栏和不规则填充都必须从同一角色母版衍生。</p></div>
       </div>
 
       <div class="site-collision-heading">
@@ -210,17 +220,17 @@
       <div class="site-collision-grid">
         <article class="site-study study-xhs">
           <header><b>小红书式</b><span>瀑布流 · 多尺度填隙</span></header>
-          <div class="masonry-dragons" aria-hidden="true"><i class="tile t1"></i><i class="tile t2"></i><i class="tile t3"></i><i class="tile t4"></i><i class="tile t5"></i><i class="tile t6"></i></div>
+          <div class="masonry-dragons" aria-hidden="true"><img class="m1" src="assets/nailong-ui/stand.png" alt=""><img class="m2" src="assets/nailong-ui/leap.png" alt=""><img class="m3" src="assets/nailong-ui/shy.png" alt=""><img class="m4" src="assets/nailong-ui/leap.png" alt=""><img class="m5" src="assets/nailong-ui/stand.png" alt=""><img class="m6" src="assets/nailong-ui/leap.png" alt=""></div>
           <p>卡片不再是统一矩形：大奶龙承担主笔记，中奶龙补列间落差，小奶龙填边角，仍保留瀑布流的扫描节奏。</p>
         </article>
         <article class="site-study study-bili">
           <header><b>B站式</b><span>视频网格 · 横卧播放器</span></header>
-          <div class="video-dragons" aria-hidden="true"><i><b></b><span></span></i><i><b></b><span></span></i><i><b></b><span></span></i><i><b></b><span></span></i></div>
+          <div class="video-dragons" aria-hidden="true"><i><img src="assets/nailong-ui/leap.png" alt=""><b></b><span></span></i><i><img src="assets/nailong-ui/leap.png" alt=""><b></b><span></span></i><i><img src="assets/nailong-ui/leap.png" alt=""><b></b><span></span></i><i><img src="assets/nailong-ui/leap.png" alt=""><b></b><span></span></i></div>
           <p>每张视频卡成为横卧奶龙：肚皮承载画面，头部标记作者，尾巴延伸播放进度；网格和标题仍然清晰。</p>
         </article>
         <article class="site-study study-taobao">
           <header><b>淘宝式</b><span>搜索与类目 · 长路径对象</span></header>
-          <div class="commerce-dragons" aria-hidden="true"><i class="search-dragon"><b></b><span></span></i><div><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="commerce-dragons" aria-hidden="true"><i class="search-dragon"><img src="assets/nailong-ui/leap.png" alt=""><b></b></i><div><img src="assets/nailong-ui/shy.png" alt=""><img src="assets/nailong-ui/stand.png" alt=""><img src="assets/nailong-ui/leap.png" alt=""><img src="assets/nailong-ui/shy.png" alt=""><img src="assets/nailong-ui/stand.png" alt=""><img src="assets/nailong-ui/leap.png" alt=""></div></div>
           <p>搜索框由一只伸展奶龙构成，分类入口由小奶龙沿侧边排队；高密度信息继续规整，角色只接管外壳与路径。</p>
         </article>
       </div>
@@ -284,8 +294,8 @@
 
   <dialog id="lightbox">
     <button class="lightbox-close" aria-label="关闭大图">关闭</button>
-    <img src="" alt="画廊大图">
+    <img src="assets/starry-nailong.png" alt="画廊大图">
   </dialog>
-  <script src="script.js"></script>
+  <script src="script.js?v=0.3.2"></script>
 </body>
 </html>
