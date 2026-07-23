@@ -28,6 +28,8 @@ description: Transform an uploaded meme, artwork, photo, poster, screenshot, or 
 
 需要比较算法与高质量示例时，读取 [benchmark.md](references/benchmark.md)，运行 `scripts/benchmark_nailong.py` 记录五项分数；低于 70 分不得宣称可用。
 
+需要提升无模型质量或判断场景上限时，读取 [no-model-optimization.md](references/no-model-optimization.md)。不要通过降低标准、增加奶龙数量或改变权重来伪造提分。
+
 需要准确描述奶龙外观时，必须同时读取 [character-spec.md](references/character-spec.md) 与 [character-topology-contract.md](references/character-topology-contract.md)，并查看 `assets/reference/nailong-reference-board.webp`。角色参考与拓扑合同优先于临时提示词；只做黄色椭圆或通用小龙判定为失败。需要选择对象变形方式或诊断失败结果时，读取 [transformation-patterns.md](references/transformation-patterns.md)。需要跨模型复制提示词时，读取 [universal-prompt.md](references/universal-prompt.md)。需要参考完整案例时，读取 [examples.md](references/examples.md)。
 
 ## 替换规则
