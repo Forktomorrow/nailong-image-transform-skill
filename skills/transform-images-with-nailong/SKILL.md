@@ -36,6 +36,8 @@ description: Transform an uploaded meme, artwork, photo, poster, screenshot, or 
 
 需要设计防过拟合评测或报告算法极限时，读取 [benchmark-protocol.md](references/benchmark-protocol.md)。必须区分 Train/Dev/Public validation/Hidden holdout，并把背景保持、边缘融合、速度和未见形状纳入评测。
 
+需要生成多样化模型参考真值时，读取 [model-reference-prompts.md](references/model-reference-prompts.md)。参考模型图只能用于比较和盲评，不能作为无模型算法的输入素材或训练姿态贴图。
+
 需要准确描述奶龙外观时，必须同时读取 [character-spec.md](references/character-spec.md) 与 [character-topology-contract.md](references/character-topology-contract.md)，并查看 `assets/reference/nailong-reference-board.webp`。角色参考与拓扑合同优先于临时提示词；只做黄色椭圆或通用小龙判定为失败。需要选择对象变形方式或诊断失败结果时，读取 [transformation-patterns.md](references/transformation-patterns.md)。需要跨模型复制提示词时，读取 [universal-prompt.md](references/universal-prompt.md)。需要参考完整案例时，读取 [examples.md](references/examples.md)。
 
 ## 替换规则
