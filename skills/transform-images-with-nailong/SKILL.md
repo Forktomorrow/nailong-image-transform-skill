@@ -34,6 +34,8 @@ description: Transform an uploaded meme, artwork, photo, poster, screenshot, or 
 
 需要实现跨场景自动适配时，读取 [adaptive-topology-generator.md](references/adaptive-topology-generator.md)。案例表只能作为评测集，不能写成场景硬编码；必须从 mask 的轮廓、骨架、宽度场、曲率和视觉重心自动检索并变形姿态。
 
+需要设计防过拟合评测或报告算法极限时，读取 [benchmark-protocol.md](references/benchmark-protocol.md)。必须区分 Train/Dev/Public validation/Hidden holdout，并把背景保持、边缘融合、速度和未见形状纳入评测。
+
 需要准确描述奶龙外观时，必须同时读取 [character-spec.md](references/character-spec.md) 与 [character-topology-contract.md](references/character-topology-contract.md)，并查看 `assets/reference/nailong-reference-board.webp`。角色参考与拓扑合同优先于临时提示词；只做黄色椭圆或通用小龙判定为失败。需要选择对象变形方式或诊断失败结果时，读取 [transformation-patterns.md](references/transformation-patterns.md)。需要跨模型复制提示词时，读取 [universal-prompt.md](references/universal-prompt.md)。需要参考完整案例时，读取 [examples.md](references/examples.md)。
 
 ## 替换规则
