@@ -40,6 +40,8 @@ description: Transform an uploaded meme, artwork, photo, poster, screenshot, or 
 
 需要执行真正的像素级替换时，读取 [pixel-field-rewrite.md](references/pixel-field-rewrite.md)。此时不得使用现成奶龙 PNG 作为最终纹理；必须从原物体像素场提取、重采样、变色并在窄边带做梯度域融合。
 
+实验性实现位于 `scripts/pixel_field_rewrite.py`。它用于验证像素场重写，不代表已经达到最终质量；自动分割错误或拓扑不完整时必须回退并标记失败，不能把结果当作合格奶龙化。
+
 需要准确描述奶龙外观时，必须同时读取 [character-spec.md](references/character-spec.md) 与 [character-topology-contract.md](references/character-topology-contract.md)，并查看 `assets/reference/nailong-reference-board.webp`。角色参考与拓扑合同优先于临时提示词；只做黄色椭圆或通用小龙判定为失败。需要选择对象变形方式或诊断失败结果时，读取 [transformation-patterns.md](references/transformation-patterns.md)。需要跨模型复制提示词时，读取 [universal-prompt.md](references/universal-prompt.md)。需要参考完整案例时，读取 [examples.md](references/examples.md)。
 
 ## 替换规则
