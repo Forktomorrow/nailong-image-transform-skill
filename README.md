@@ -19,7 +19,7 @@ python skills/transform-images-with-nailong/scripts/generate_nailong.py \
   --input input.png --target "旋转楼梯" --backend prompt-only
 ```
 
-不依赖生图模型的几何拟合思路见 `references/algorithmic-pipeline.md`。它适合网页控件、规则图形和路径类对象；复杂画面仍需要图像编辑模型完成笔触、遮挡和自然补全。
+不依赖生图模型的几何拟合思路见 `references/algorithmic-pipeline.md`；要求保留原画笔触时再读取 `references/style-preserving-raster-replacement.md`。此前的 `docs/assets/procedural/*-fit` 是速度/布局演示，不是最终的风格保持替换结果。
 
 ## 目录
 
