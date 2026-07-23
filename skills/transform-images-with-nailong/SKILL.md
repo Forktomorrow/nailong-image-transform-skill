@@ -22,6 +22,8 @@ description: Transform an uploaded meme, artwork, photo, poster, screenshot, or 
 6. 使用可编辑输入图像的生图工具执行。若当前环境没有图像编辑工具，输出可直接复制的完整提示词。
 7. 检查结果；一次只修一个问题，并重复所有不变量。
 
+需要选择推理方式时，读取 [model-backends.md](references/model-backends.md)。没有生图模型也要做预览或网页组件拟合时，读取 [algorithmic-pipeline.md](references/algorithmic-pipeline.md)，使用“视觉分析 + 多尺度奶龙资产拟合 + 遮罩合成”，不要把卷积/池化误写成生成器。仓库附带 `scripts/generate_nailong.py`：默认只生成编辑计划；检测到用户明确提供的 ComfyUI 与 workflow 后才提交本地任务。
+
 需要准确描述奶龙外观时，必须同时读取 [character-spec.md](references/character-spec.md) 与 [character-topology-contract.md](references/character-topology-contract.md)，并查看 `assets/reference/nailong-reference-board.webp`。角色参考与拓扑合同优先于临时提示词；只做黄色椭圆或通用小龙判定为失败。需要选择对象变形方式或诊断失败结果时，读取 [transformation-patterns.md](references/transformation-patterns.md)。需要跨模型复制提示词时，读取 [universal-prompt.md](references/universal-prompt.md)。需要参考完整案例时，读取 [examples.md](references/examples.md)。
 
 ## 替换规则

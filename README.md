@@ -12,6 +12,15 @@
 - 前端与完整设计：先使用任意基础设计 Skill，再调用 `$nailongize-designs` 作为最终过滤器。
 - 其他生图模型：上传图片，复制 `skills/transform-images-with-nailong/references/universal-prompt.md` 中的通用编辑块。
 
+模型后端与本地模式：`skills/transform-images-with-nailong/references/model-backends.md` 说明 ComfyUI、Diffusers、提示词模式和无模型合成的边界；`scripts/generate_nailong.py` 可在没有 API Key 时安全生成编辑计划，只有用户显式提供本地 ComfyUI workflow 才会运行推理。
+
+```bash
+python skills/transform-images-with-nailong/scripts/generate_nailong.py \
+  --input input.png --target "旋转楼梯" --backend prompt-only
+```
+
+不依赖生图模型的几何拟合思路见 `references/algorithmic-pipeline.md`。它适合网页控件、规则图形和路径类对象；复杂画面仍需要图像编辑模型完成笔触、遮挡和自然补全。
+
 ## 目录
 
 ```text
