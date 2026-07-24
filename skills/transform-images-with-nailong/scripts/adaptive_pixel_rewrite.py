@@ -56,10 +56,26 @@ def adaptive_topology(mask, d):
         for dx, dy in [(-.22,.10),(.18,.18),(-.12,.38),(.12,.42)]:
             rr=max(3,int(hr*.38)); px=int(cx+dx*rw); py=int(cy+dy*rh)
             dr.ellipse((px-rr,py-rr,px+rr,py+rr), fill=255)
+        # Tail closes the arc; limbs attach to the inner bend and are part of
+        # the generated target mask, not an overlaid bitmap detail.
+        dr.polygon([(int(cx+rw*.18), int(cy+rh*.12)),
+                    (int(cx+rw*.43), int(cy+rh*.02)),
+                    (int(cx+rw*.32), int(cy+rh*.20))], fill=255)
+        for dx, dy in [(-.18,.18),(.10,.28),(-.10,.40),(.16,.46)]:
+            rr=max(3,int(hr*.30)); px=int(cx+dx*rw); py=int(cy+dy*rh)
+            dr.ellipse((px-rr,py-rr,px+rr,py+rr), fill=255)
         out = np.asarray(canvas) > 0
         out &= ndimage.binary_dilation(mask, iterations=max(2, int(min(rw,rh)*.08)))
     else:
         out = mask.copy()
+        # For elongated shapes, use the principal axis to place short limbs
+        # at two high-width locations and a tail at the low-width endpoint.
+        yy, xx = np.where(mask)
+        cx, cy = xx.mean(), yy.mean(); axis = d["axis"]
+        scale = max(3, int(np.sqrt(d["area"])*.045))
+        for sign in (-1, 1):
+            px, py = int(cx + axis[0]*sign*scale*4), int(cy + axis[1]*sign*scale*4)
+            out[max(0,py-scale):py+scale+1, max(0,px-scale):px+scale+1] = True
     ys, xs = np.where(mask)
     cx, cy = xs.mean(), ys.mean()
     axis = d["axis"]
